@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida (
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+    }
+    .box1 {
+    background-color: lightblue;
+    padding: 30px;
+    border: 1px solid blue;
+    margin-top: 20px;
+    }
+    .box2 {
+    background-color: lightblue;
+    padding: 30px;
+    border: 1px solid blue;
+    margin-top: 20px;
+    }
+    .box3 {
+    background-color: lightblue;
+    padding: 30px;
+    border: 1px solid blue;
+    margin-top: 20px;
+    }
+
