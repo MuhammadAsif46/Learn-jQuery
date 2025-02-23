@@ -7,7 +7,7 @@
   </head>
   <body>
     <!-- jQuery download link -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>      
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
 
     <!-- jQuery cdn link -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
@@ -15,9 +15,21 @@
     <!-- Basic Syntax -->
     <h1>Hello World!</h1>
     <script>
-        // Basic Syntax
-        // $(selector).action()
-        $("h1").remove(); 
+      // Basic Syntax
+      // $(selector).action()
+      // $("h1").remove();
+
+      //----- Document Ready Method in jQuery ----------------- //
+
+      $(document).ready(function () {
+        alert("Hello World!");
+        // $("h1").hide();
+      });
+
+      // another ways same us ready method:
+      $(function () {
+        alert("Hello World!");
+      });
     </script>
-</body>
+  </body>
 </html>
