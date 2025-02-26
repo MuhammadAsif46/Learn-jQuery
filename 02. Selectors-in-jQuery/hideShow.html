@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hide Show Effects</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1" id="box1">
+        <h1>BOX 1</h1>
+        <p>Some Content</p>
+      </div>
+      <button class="btn" id="btnEffect">Hide</button>
+    </div>
+
+    <!-- jQuery download link -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script>
+      $(function () {
+        $("#btnEffect").click(function () {
+          $("#box1").toggle(function () {
+            if ($(this).is(":visible")) {
+              $("#btnEffect").text("Hide");
+            } else {
+              $("#btnEffect").text("Show");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
