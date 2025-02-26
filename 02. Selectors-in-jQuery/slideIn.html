@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Slide Effects</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1 id="heading">BOX 1</h1>
+        <p id="para">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias culpa ratione, amet possimus explicabo, nam temporibus sequi enim reprehenderit aut delectus commodi numquam aliquam laborum voluptas debitis eveniet omnis odit.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, vel! Necessitatibus explicabo reprehenderit id animi voluptatum quae, quasi dicta modi. Maiores ratione facere provident facilis labore voluptatibus, delectus ea? Adipisci.
+        </p>
+      </div>
+    </div>
+
+    <!-- jQuery download link -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script>
+      $(function () {
+        $("#heading").click(function () {
+          // $("#para").slideUp()
+          // $("#para").slideDown() // if para is initily display: none
+          $("#para").slideToggle() // if para is initily display: none
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -28,7 +28,7 @@
     margin-top: 20px;
     } */
 
-    /* FadeInOut Styles start here */
+/* FadeInOut Styles start here */
 .box1{
     background-color: lightblue;
     padding: 30px;
@@ -41,5 +41,13 @@
     padding: 10px;
     margin-top: 10px;
 }
+/* FadeInOut Styles end here */
 
-    /* FadeInOut Styles end here */
+
+    /* Slide Styles start here */
+
+    #para{
+        font-size: 18px;
+    }
+    /* Slide Styles end here */
+
