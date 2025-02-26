@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Fade In Out Effects</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1" id="boxEffect">
+        <h1>BOX 1</h1>
+        <p>Some Content</p>
+      </div>
+      <button class="btn" id="btnEffect">Show Effect </button>
+    </div>
+
+
+
+    <!-- jQuery download link -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script>
+      $(function(){
+        let isVisible = true;
+        $("#btnEffect").click(function(){
+          if (isVisible) {
+            $("#boxEffect").fadeOut(2000);
+            isVisible = !isVisible;
+          } else{
+            $("#boxEffect").fadeIn(2000);
+            isVisible = !isVisible;
+          }
+        })
+      });
+    </script>
+
+   
+    
+  </body>
+</html>

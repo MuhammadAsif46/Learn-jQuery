@@ -9,7 +9,7 @@
     margin-bottom: 20px;
     text-align: center;
     }
-    .box1 {
+    /* .box1 {
     background-color: lightblue;
     padding: 30px;
     border: 1px solid blue;
@@ -26,5 +26,20 @@
     padding: 30px;
     border: 1px solid blue;
     margin-top: 20px;
-    }
+    } */
 
+    /* FadeInOut Styles start here */
+.box1{
+    background-color: lightblue;
+    padding: 30px;
+    border: 1px solid blue;
+    margin-top: 20px;
+}
+
+.btn{
+    width: 200px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+    /* FadeInOut Styles end here */
