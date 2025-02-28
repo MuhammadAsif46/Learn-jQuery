@@ -51,3 +51,23 @@
     }
     /* Slide Styles end here */
 
+
+/* AddRemoveClass Styles start here */
+
+table th{
+    padding: 10px;
+}
+table td{
+    padding: 10px;
+}
+
+.over{
+    background-color: lightcoral;
+}
+
+.clicked{
+    background-color: blue;
+    color: white;
+}
+
+/* AddRemoveClass Styles end here */

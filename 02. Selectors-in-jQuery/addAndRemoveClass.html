@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>CSS Add and Remove Effects</title>
+      <!-- jQuery download link -->
+      <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <div class="container">
+        <table border="1">
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>ABC</td>
+                <td>abc</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>XYZ</td>
+                <td>xyz</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>ABC</td>
+                <td>abc</td>
+                <td>Japan</td>
+            </tr>
+            <tr>
+                <td>ABC</td>
+                <td>abc</td>
+                <td>China</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <script>
+      $(function(){
+        $("tr").mouseover(function(){
+            $(this).addClass("over")
+        }).mouseleave(function(){
+            $(this).removeClass("over")
+        }).click(function(){
+            if($(this).hasClass("clicked")){
+                $(this).removeClass("clicked")
+            }else{
+                $(this).removeClass("over").addClass("clicked")
+            }
+        })
+      });
+    </script>
+
+   
+    
+  </body>
+</html>
