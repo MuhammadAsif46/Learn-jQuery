@@ -22,7 +22,7 @@
           <p id="passhint">Note : use alphabets and number</p>
           <p id="passMsg"></p>
           <p>New to Swift, <u>Register Here</u>!</p>
-          <button>Login</button>
+          <button type="submit">Login</button>
         </form>
       </div>
     </div>
@@ -43,12 +43,24 @@
           })
           .blur(function () {
             $("#passhint").slideUp()
-          }).change(function () {
+          })
+          .change(function () {
             let passSize = $("input:last").val()
             if(passSize.length < 8){
               $("#passMsg").text("Your password must be at least 8 characters")
             }else{
               $("#passMsg").text("")
+            }
+          });
+
+          $("form").submit(function(){
+            let uName = $("#username").val();
+            let uPass = $("#password").val();
+            if(uName == "admin" && uPass == "123456789"){
+              alert("Login Success!");
+            }else{
+              alert("Login Failed");
+
             }
           })
       });
