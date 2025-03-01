@@ -27,6 +27,9 @@
     #passhint{
         color: red;
     }
+    #passMsg{
+        color: rgb(233, 52, 52);
+    }
 
     .formContainer input {
         margin-top: 20px;
