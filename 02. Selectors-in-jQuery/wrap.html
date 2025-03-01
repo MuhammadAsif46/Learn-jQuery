@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Wrap and Wrap Inner</title>
+      <!-- jQuery download link -->
+      <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <div class="container">
+    <div class="container">
+      <h1>Wrap Example</h1>
+      
+    </div>
+
+
+    <script>
+      $(function(){
+        $("h1").click(function(){
+          // $("h1").wrap("<div class='box1'></div>")
+          $("h1").wrapInner("<div class='box1'></div>")
+        })
+      });
+    </script>
+
+   
+    
+  </body>
+</html>
