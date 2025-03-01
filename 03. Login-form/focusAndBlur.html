@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Blur and Focus Effects</title>
+    <!-- jQuery download link -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="formContainer">
+        <h1>Swift-Form</h1>
+        <span>Please sign in to your account</span>
+        <form action="#">
+          <label for="username">Username</label>
+          <input type="text" id="username" />
+          <br />
+          <label for="password">Password</label>
+          <input type="password" id="password" />
+          <p id="passhint">Note : use alphabets and number</p>
+          <p>New to Swift, <u>Register Here</u>!</p>
+          <button>Login</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      $(function () {
+        $("#passhint").hide();
+        $("input")
+          .focus(function () {
+            $(this).css("background-color", "#faedcd");
+          })
+          .blur(function () {
+            $(this).css("background-color", "white");
+          });
+        $("input:last")
+          .focus(function () {
+            $("#passhint").slideDown()
+          })
+          .blur(function () {
+            $("#passhint").slideUp()
+          })
+      });
+    </script>
+  </body>
+</html>
