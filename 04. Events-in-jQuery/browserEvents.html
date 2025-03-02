@@ -11,23 +11,71 @@
   <body>
     <div class="container">
       <h2>Browser Events Example</h2>
-      <img src="./assets/kitchen-image.jpg" alt="image" id="bannerImg">
+      <img src="./assets/kitchen-image.jpg" alt="image" id="bannerImg" />
+      <div id="scroll">
+        <h2>Some content</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse nulla
+          expedita consectetur. Asperiores vel molestiae assumenda adipisci a
+          obcaecati earum ullam consequuntur doloribus impedit rem laudantium
+          temporibus minus natus, magnam nihil! Aliquam nam quidem veniam
+          doloribus corrupti sunt vitae quos necessitatibus alias itaque. Fugit
+          esse illum officia, voluptatem quia quasi quaerat expedita! Illum
+          alias, aliquid recusandae facilis sequi nihil natus aliquam molestias
+          repellendus sed deleniti cum aut suscipit enim rem est magnam culpa
+          error possimus! Modi dignissimos cum distinctio quisquam qui earum
+          similique eos officia reiciendis nihil quibusdam quidem, beatae fugiat
+          placeat illum explicabo expedita! Hic porro eveniet voluptatum cum
+          voluptate quidem? Aliquam id architecto voluptas cupiditate illum?
+          Perferendis temporibus accusantium repudiandae quos nesciunt. Ab
+          numquam accusantium at soluta quo amet ullam exercitationem modi
+          excepturi! Alias aspernatur deserunt suscipit quibusdam, cupiditate
+          ipsa temporibus praesentium, a quos nam excepturi! Voluptas voluptatem
+          exercitationem similique illum iste enim tempore ratione autem ut
+          voluptatibus mollitia sint recusandae beatae consectetur placeat, quos
+          nostrum quis qui deleniti rerum animi. Cumque, incidunt recusandae!
+          Repellat, asperiores voluptate rerum pariatur architecto possimus qui.
+          Dolorum voluptates praesentium ipsa laudantium accusamus adipisci
+          modi, dicta repellat voluptatibus sed error magni ullam totam quaerat
+          quo eveniet ad blanditiis nisi illo sapiente. Necessitatibus aliquam
+          accusamus iure alias optio ipsum magni voluptatibus animi harum
+          tempora consequatur, vel exercitationem inventore dicta dolore
+          mollitia vero? Perferendis ipsum eos officiis temporibus aspernatur
+          totam vitae ratione, rerum fugiat ullam quisquam tempore inventore
+          dolore nesciunt asperiores aliquam exercitationem illo, perspiciatis
+          ipsam unde, fuga enim odio? Amet, itaque, obcaecati nulla magnam
+          aperiam id aliquam incidunt dolorem corporis laboriosam nihil totam
+          quis quam quibusdam, ut deserunt eum architecto sequi excepturi.
+          Assumenda ipsam nesciunt magnam possimus accusamus qui earum suscipit
+          quod ratione pariatur est, eum quisquam, minima enim rerum atque
+          provident dignissimos. Aut exercitationem nihil alias commodi odit
+          nobis qui consequatur laborum accusamus?
+        </p>
+      </div>
     </div>
 
     <script>
-      $(window).resize(function() {
-        if(this.resizeTo) clearTimeout(this.resizeTo);
-        this.resizeTo = setTimeout(function(){
-          $(this).trigger("resizeEnd")
-        },500)
-      })
+      $(window).resize(function () {
+        if (this.resizeTo) clearTimeout(this.resizeTo);
+        this.resizeTo = setTimeout(function () {
+          $(this).trigger("resizeEnd");
+        }, 500);
+      });
       $(function () {
         $(window).resize(function () {
           $("#bannerImg").fadeOut("slow");
-        })
-        $(window).bind("resizeEnd",function () {
+        });
+        $(window).bind("resizeEnd", function () {
           $("#bannerImg").fadeIn("slow");
-        })
+        });
+        $(window).scroll(function () {
+          if (
+            document.body.scrollTop > 500 ||
+            document.documentElement.scrollTop > 500
+          ) {
+            $("#scroll").slideUp(5000);
+          }
+        });
       });
     </script>
   </body>
