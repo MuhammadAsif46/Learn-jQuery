@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Browser Events</title>
+    <!-- jQuery download link -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Browser Events Example</h2>
+      <img src="./assets/kitchen-image.jpg" alt="image" id="bannerImg">
+    </div>
+
+    <script>
+      $(window).resize(function() {
+        if(this.resizeTo) clearTimeout(this.resizeTo);
+        this.resizeTo = setTimeout(function(){
+          $(this).trigger("resizeEnd")
+        },500)
+      })
+      $(function () {
+        $(window).resize(function () {
+          $("#bannerImg").fadeOut("slow");
+        })
+        $(window).bind("resizeEnd",function () {
+          $("#bannerImg").fadeIn("slow");
+        })
+      });
+    </script>
+  </body>
+</html>

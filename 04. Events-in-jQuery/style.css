@@ -44,3 +44,9 @@
         padding: 8px;
     }
     /* form styling end here*/
+
+    #bannerImg{
+        width: 100vw;
+        height: 80vh;
+        object-fit: cover;
+    }
