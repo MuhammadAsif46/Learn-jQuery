@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Data Form Json File</title>
+    <!-- jQuery download link -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Local Json Data Example</h2>
+      <table border="1"></table>
+    </div>
+
+    <script>
+      $.getJSON("./data/posts.json", function(data){
+        $.each(data,function(i,val){
+          let title = val.title
+          let body = val.body
+          $("table").append("<tr><td>" + title + "</td><td>" + body + "</td></tr>")
+        })
+      })
+    </script>
+  </body>
+</html>

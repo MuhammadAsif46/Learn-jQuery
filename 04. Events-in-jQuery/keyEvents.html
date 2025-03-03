@@ -17,9 +17,9 @@
 
     <script>
       $(function () {
-        $("textarea").on("keypress", function (event){
+        $("textarea").on("keydown", function (event){
           let myKey = event.key;
-          $("output").append("You Press: " + myKey + "<br />");
+           $("#output").append("You Press: " + myKey + "<br />");
           if(myKey == "Escape"){
             $("#output").html("");
           }
