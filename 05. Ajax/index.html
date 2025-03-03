@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- jQuery download link -->
+    <script src="node_modules/jquery/dist/jquery.min.js" defer></script>
+
+    <title>API Request</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ajax API Request Example</h1>
+      <button id="btnData">Show data</button>
+      <table border="" style="margin: 20px; display: none">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      // jquery ready function
+
+      $("#btnData").click(function () {
+        let url = "https://jsonplaceholder.typicode.com/users";
+        const settings = {
+          async: true,
+          crossDomain: true,
+          url: url,
+          method: "GET",
+        };
+        $.ajax(settings).done(function (res) {
+          $.each(res, function (i, val) {
+            let name = val.name;
+            let email = val.email;
+            $("table").show();
+            $("table").append(
+              "<tr><td>" + name + "</td><td>" + email + " </td></tr>"
+            );
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

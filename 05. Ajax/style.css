@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida (
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+    }
+
+    /* form styling start here*/
+
+    .formContainer {
+        font-family: "Segoe UI", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border: 1px solid gray;
+        box-shadow: 2px 3px;
+        padding: 20px;
+    }
+
+    .formContainer h1{
+        font-family: cursive;
+    }
+
+
+    #passhint{
+        color: red;
+    }
+    #passMsg{
+        color: rgb(233, 52, 52);
+    }
+
+    .formContainer input {
+        margin-top: 20px;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .formContainer button{
+        margin-top: 20px;
+        font-size: 20px;
+        width: 300px;
+        padding: 8px;
+    }
+    /* form styling end here*/
+
+    #bannerImg{
+        width: 100vw;
+        height: 80vh;
+        object-fit: cover;
+    }
