@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>key Board Events</title>
+    <!-- jQuery download link -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>key Press Events Example</h2>
+      <textarea name="" id="type" cols="30" rows="10"></textarea>
+      <p id="output"></p>
+    </div>
+
+    <script>
+      $(function () {
+        $("textarea").on("keypress", function (event){
+          let myKey = event.key;
+          $("output").append("You Press: " + myKey + "<br />");
+          if(myKey == "Escape"){
+            $("#output").html("");
+          }
+        })
+      });
+    </script>
+  </body>
+</html>
