@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <!-- jQuery download link -->
-    <script src="node_modules/jquery/dist/jquery.min.js" defer></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
 
     <title>API Request</title>
   </head>
@@ -22,9 +22,7 @@
     </div>
 
     <script>
-      // jquery ready function
-
-      $("#btnData").click(function () {
+      $('#btnData').click(function () {
         let url = "https://jsonplaceholder.typicode.com/users";
         const settings = {
           async: true,
@@ -33,7 +31,11 @@
           method: "GET",
         };
         $.ajax(settings).done(function (res) {
+          console.log("res-->" + res);
+
           $.each(res, function (i, val) {
+            console.log("val--->" + val);
+
             let name = val.name;
             let email = val.email;
             $("table").show();
